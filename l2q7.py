@@ -50,6 +50,9 @@ print("\n")
 
 n = int(input('Digite a quantidade de linhas e colunas da matriz: '))
 
+limite = n**2
+eh_quadrada = True
+
 print("\n")
 
 for i in range(n):
@@ -63,4 +66,12 @@ print('\n')
 print("Matriz:", matriz)
 print("\n")
 
-matriz_quadrada(matriz,n)
+for i in range(n):
+    for j in range(n):
+        if matriz[i][j]<1 or matriz[i][j]>limite:
+            eh_quadrada = False
+        
+if eh_quadrada == True:
+    matriz_quadrada(matriz,n)
+else:
+    print("Essa Matriz Quadrada não é um Quadrado Mágico\n")

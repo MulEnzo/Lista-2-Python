@@ -3,20 +3,18 @@ print("\nMensagem:",mensagem)
 
 print("\nMensagem depois das mudanças:", end=" ")
 
-for i in mensagem:
-    if i == "a" or i == "A":
-        print("4", end="")
-    elif i == "b" or i == "B":
-        print("8", end="")
-    elif i == "e" or i == "E":
-        print("3", end="")
-    elif i == "o" or i == "O":
-        print("0", end="")
-    elif i == "s" or i == "S":
-        print("5", end="")
-    elif i == "t" or i == "T":
-        print("7", end="")
-    else:
-        print(i, end="")
+mensagem = mensagem.replace("a","4")
+mensagem = mensagem.replace("A","4")
+mensagem = mensagem.replace("b","8")
+mensagem = mensagem.replace("B","8")
+mensagem = mensagem.replace("e","3")
+mensagem = mensagem.replace("E","3")
+mensagem = mensagem.replace("o","0")
+mensagem = mensagem.replace("O","0")
+mensagem = mensagem.replace("s","5")
+mensagem = mensagem.replace("S","5")
+mensagem = mensagem.replace("t","7")
+mensagem = mensagem.replace("T","7")
 
+print(mensagem)
 print("\n")
