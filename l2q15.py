@@ -2,6 +2,7 @@ def teste_cnpj(cnpj):
 
     cnpj_1_12 = []
     cnpj_1_13 = []
+    cnpj_1_14 = []
     lista_multiplicador1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3 ,2]
     lista_multiplicador2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3 ,2]
     soma = 0
@@ -16,7 +17,6 @@ def teste_cnpj(cnpj):
         x = (cnpj_1_12[i])*(lista_multiplicador1[i])
         soma = soma + x
     y = soma%11
-
     if y<2:
         d1 = 0
     else:
@@ -30,26 +30,25 @@ def teste_cnpj(cnpj):
         k = (cnpj_1_13[i])*(lista_multiplicador2[i])
         soma = soma + k
     l = soma%11
-
     if l<2:
         d2 = 0
     else:
         d2 = 11-l
 
-    cnpj_final = []
-    cnpj_final = cnpj_1_13
-    cnpj_final.append(d2)
-    c = ''
-    for v in range(len(cnpj_final)):
-        c+=str(cnpj_final[v])
+    cnpj_1_14 = cnpj_1_13
+    cnpj_1_14.append(d2)
 
-    if cnpj == c:
+    cnpj_final = ''
+    for i in range(len(cnpj_1_14)):
+        cnpj_final+=str(cnpj_1_14[i])
+
+    if cnpj == cnpj_final:
         return True
     else:
         return False
 
 
-cnpj = input("\nDigite o número do CNPJ (apenas os números): ")
+cnpj = input("\nDigite o CNPJ (apenas os números): ")
 
 tam = len(cnpj)
 
@@ -58,4 +57,7 @@ if tam == 14:
 else:
     print("\nO número digitado não tem as dimensões corretas!")
 
-print(retorno)
+if retorno == True:
+    print("\nEste é um CNPJ aceito!\n")
+else:
+    print("\nEste não é um CNPJ aceito!\n")

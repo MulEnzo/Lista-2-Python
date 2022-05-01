@@ -7,7 +7,7 @@ def incluir_novo_nome(n,t):
         lista_de_telefones = []
         lista_de_telefones.append(t)
         dicionario[n] = lista_de_telefones
-        print("\nO nome com o seu repectivo número foi incluido na agenda com sucesso!")
+        print("\nO nome e o telefone foram incluidos na agenda com sucesso!")
 
 def incluir_telefone(n, t):
     if n in dicionario:
@@ -17,6 +17,8 @@ def incluir_telefone(n, t):
         pergunta = input("\nO nome não existe na agenda. Deseja incluí-lo na agenda? (Sim/Não): ")
         if pergunta == "Sim":
             incluir_novo_nome(n, t)
+        else:
+            print("\nO nome e o telefone não foram adicionados à lista!")
 
 def excluir_telefone(n, t):
     if n in dicionario:
