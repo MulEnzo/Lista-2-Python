@@ -10,7 +10,7 @@ while opcao!=6:
     opcao = int(input("Digite a opção desejada: "))
 
     if opcao == 1:
-        nome = input("\nDigite o nome que deseja incluir na agenda: ")
+        nome = input("Digite o nome que deseja incluir na agenda: ")
         tel = int(input("Digite o telefone dessa pessoa: "))
         funcoesl2q14.incluir_novo_nome(nome, tel)
 
@@ -25,7 +25,7 @@ while opcao!=6:
         funcoesl2q14.excluir_telefone(nome, tel)
 
     elif opcao == 4:
-        nome = input("Digite o nome da pessoa que deseja excluir: ")
+        nome = input("Digite o nome da pessoa que deseja excluir da lista: ")
         funcoesl2q14.excluir_nome(nome)
 
     elif opcao == 5:

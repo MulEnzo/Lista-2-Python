@@ -31,7 +31,7 @@ def teste_cnpj(cnpj):
         soma = soma + k
     l = soma%11
 
-    if y<2:
+    if l<2:
         d2 = 0
     else:
         d2 = 11-l
@@ -39,15 +39,17 @@ def teste_cnpj(cnpj):
     cnpj_final = []
     cnpj_final = cnpj_1_13
     cnpj_final.append(d2)
-    cnpj_final = str(cnpj_final)
+    c = ''
+    for v in range(len(cnpj_final)):
+        c+=str(cnpj_final[v])
 
-    if cnpj == cnpj_final:
+    if cnpj == c:
         return True
     else:
         return False
 
 
-cnpj = input("\nDigite o número do CNPJ: ")
+cnpj = input("\nDigite o número do CNPJ (apenas os números): ")
 
 tam = len(cnpj)
 
